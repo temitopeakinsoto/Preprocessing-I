@@ -54,6 +54,134 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+/* Compile your LESS file! */
+
+@mobileBreakpoint: 550px;
+@tabletBreakpoint: 750px;
+
+// font sizes for root
+@desktopRootFontSize: 100%;
+@mobileRootFontSize: 150%;
+
+:root {
+	font-size: @desktopRootFontSize;
+  
+	@media(max-width: @mobileBreakpoint) {
+	  font-size: @mobileRootFontSize;
+	}
+  }
+
+.container-all{
+    width: 80%;
+    font-size: 20px;
+    font-weight: 700px;
+    line-height: 1.6rem;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.nav-bar{
+    margin: 20px 0;
+}
+
+.nav-items-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.main-section{
+    width: 90%;
+    /* background-color: blue; */
+    margin: 0 1% 0 4%;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+	background-color: lightgrey;
+	button{
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		background-color: gray;
+		padding: 10px;
+		width: 15%;
+		border-radius: 10%;		
+	}
+    
+}
+
+
+.header-image{
+    width: 30%;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.header-writeup{
+    padding: 30px;
+}
+
+.profession-section{
+    display: flex;
+}
+
+.professional-summary{
+    flex: 1;    
+}
+
+.skills{
+	flex: 1;
+	h1{
+		margin-left: 20px;
+	}
+	.skills-table{
+		width: 80%;
+		margin: 0 4%;
+		border: 1px solid black
+	}
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
+  .work-history-table{
+      width: 100%;
+      margin: 5px auto;
+  }
+
+  table.work-history-table tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table.work-history-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  table.work-history-table th {
+    color: white;
+    background-color: gray;
+  }
+  
+
+  .footer {
+      color: white;
+      margin: 20px auto;
+      text-align: center;
+      padding: 30px;
+      padding-bottom: 30px;
+      background-color: gray;
+  }

@@ -1,119 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
 /* Compile your LESS file! */
-
-.container-all{
-    width: 80%;
-    font-size: 20px;
-    font-weight: 700px;
-    line-height: 1.6rem;
-    border: 1px solid black;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
+:root {
+  font-size: 100%;
 }
-
-.nav-bar{
-    margin: 20px 0;
-}
-
-.nav-items-container{
-    display: flex;
-    justify-content: flex-end;
-    
-}
-
-.nav-item{
-    list-style: none;
-    margin-right: 20px;
-    text-decoration: none;
-}
-
-.main-section{
-    width: 90%;
-    /* background-color: blue; */
-    margin: 0 1% 0 4%;
-}
-
-.header-section{
-    display: flex;
-    flex-direction: column;
-    background-color: lightgrey;
-    
-}
-
-.header-section button{
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: gray;
-    padding: 10px;
-    width: 15%;
-    border-radius: 10%;
-}
-
-.header-image{
-    width: 30%;
-    margin-top: 40px;
-    margin-left: 40px;
-}
-
-.header-writeup{
-    padding: 30px;
-}
-
-.profession-section{
-    display: flex;
-}
-
-.professional-summary{
-    flex: 1;    
-}
-
-.skills{
-    flex: 1;
-}
-
-.skills h1{
-    margin-left: 20px;
-}
-
-.skills .skills-table{
-    width: 80%;
-    margin: 0 4%;
-    border: 1px solid black
-}
-
-.skills-row .skills-table tr{
-    background-color: blue;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
+@media (max-width: 550px) {
+  :root {
+    font-size: 150%;
   }
-
-  .work-history-table{
-      width: 100%;
-      margin: 5px auto;
-  }
-
-  table.work-history-table tr:nth-child(even) {
-    background-color: #eee;
-  }
-  table#t01 tr:nth-child(odd) {
-    background-color: #fff;
-  }
-  table#t01 th {
-    color: white;
-    background-color: black;
-  }
-  
-
-  .footer {
-      color: white;
-      margin: 20px auto;
-      text-align: center;
-      padding: 30px;
-      padding-bottom: 30px;
-      background-color: gray;
-  }
+}
+.container-all {
+  width: 80%;
+  font-size: 20px;
+  font-weight: 700px;
+  line-height: 1.6rem;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.nav-bar {
+  margin: 20px 0;
+}
+.nav-items-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-item {
+  list-style: none;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.main-section {
+  width: 90%;
+  /* background-color: blue; */
+  margin: 0 1% 0 4%;
+}
+.header-section {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+.header-section button {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: gray;
+  padding: 10px;
+  width: 15%;
+  border-radius: 10%;
+}
+.header-image {
+  width: 30%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.header-writeup {
+  padding: 30px;
+}
+.profession-section {
+  display: flex;
+}
+.professional-summary {
+  flex: 1;
+}
+.skills {
+  flex: 1;
+}
+.skills h1 {
+  margin-left: 20px;
+}
+.skills .skills-table {
+  width: 80%;
+  margin: 0 4%;
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+.work-history-table {
+  width: 100%;
+  margin: 5px auto;
+}
+table.work-history-table tr:nth-child(even) {
+  background-color: #eee;
+}
+table.work-history-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+table.work-history-table th {
+  color: white;
+  background-color: gray;
+}
+.footer {
+  color: white;
+  margin: 20px auto;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 30px;
+  background-color: gray;
+}
