@@ -38,7 +38,17 @@
     display: flex;
     flex-direction: column;
     background-color: lightgrey;
-    padding: 
+    
+}
+
+.header-section button{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: gray;
+    padding: 10px;
+    width: 15%;
+    border-radius: 10%;
 }
 
 .header-image{
@@ -61,6 +71,10 @@
 
 .skills{
     flex: 1;
+}
+
+.skills h1{
+    margin-left: 20px;
 }
 
 .skills .skills-table{
@@ -96,6 +110,7 @@ th, td {
   
 
   .footer {
+      color: white;
       margin: 20px auto;
       text-align: center;
       padding: 30px;
