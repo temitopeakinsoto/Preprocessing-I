@@ -1,1 +1,67 @@
 /* Compile your LESS file! */
+
+.container-all{
+    width: 80%;
+    font-size: 22px;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+
+.nav-bar{
+    margin: 20px 0;
+}
+
+.nav-items-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.main-section{
+    width: 90%;
+    /* background-color: blue; */
+    margin: 0 1% 0 4%;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+
+.header-image{
+    width: 30%;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.profession-section{
+    display: flex;
+}
+
+.professional-summary{
+    flex: 1;    
+}
+
+.skills{
+    flex: 1;
+}
+
+.skills .skills-table{
+    width: 80%;
+    margin: 0 4%;
+    border: 1px solid black
+}
+
+.skills-row .skills-table tr{
+    background-color: blue;
+}
