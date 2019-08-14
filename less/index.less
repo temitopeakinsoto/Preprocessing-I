@@ -59,8 +59,8 @@ html, body {
 
 /* Compile your LESS file! */
 
-@mobileBreakpoint: 550px;
-@tabletBreakpoint: 750px;
+@mobileBreakpoint: 500px;
+@tabletBreakpoint: 800px;
 
 // font sizes for root
 @desktopRootFontSize: 100%;
@@ -69,9 +69,11 @@ html, body {
 :root {
 	font-size: @desktopRootFontSize;
   
-	@media(max-width: @mobileBreakpoint) {
-	  font-size: @mobileRootFontSize;
-	}
+	// @media(max-width: @mobileBreakpoint) {
+	//   font-size: @mobileRootFontSize;
+	//   display: flex;
+	//   flex-direction: column;
+	// }
   }
 
 .container-all{
@@ -81,7 +83,17 @@ html, body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 1.25rem 7.5rem;
+	padding: 1.25rem 7.5rem;
+	@media(max-width: @mobileBreakpoint) {
+		font-size: @mobileRootFontSize;
+		padding: 0;
+		width: 100%;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		font-size: @mobileRootFontSize;
+		padding: 0;
+		width: 100%;	
+	}
 }
 
 .nav-bar{
@@ -91,7 +103,13 @@ html, body {
 
 .nav-items-container{
     display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
+	@media(max-width: @mobileBreakpoint) {		
+		justify-content: center;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		justify-content: center;
+	}
     
 }
 
@@ -117,17 +135,31 @@ html, body {
 		font-weight: bold;
 		background-color: gray;
 		padding: 10px;
-		width: 15%;
-		border-radius: 10%;		
-	}
-    
+		width: 20%;
+		margin: 1rem auto;
+		border-radius: 10%;	
+		@media(max-width: @mobileBreakpoint) {		
+			margin: 1rem auto;
+		}
+		@media(max-width: @tabletBreakpoint) {	
+			margin: 1rem auto;
+		}
+			
+	}    
 }
-
 
 .header-image{
     width: 30%;
     margin-top: 40px;
-    margin-left: 40px;
+	margin-left: 40px;
+	@media(max-width: @mobileBreakpoint) {		
+		width: 50%;
+    	margin: 0.6rem auto;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		width: 50%;
+    	margin: 0.6rem auto;
+	}
 }
 
 .header-writeup{
@@ -137,10 +169,30 @@ html, body {
 .profession-section{
 	display: flex;
 	margin: 4% 0;
+	@media(max-width: @mobileBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		flex-direction: column;
+		padding: 0;
+		width: 100%;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		flex-direction: column;
+		padding: 0;
+		width: 100%;	
+	}
 }
 
 .professional-summary{
-    flex: 1;    
+	flex: 1;   
+	@media(max-width: @mobileBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		margin: 2.5rem 0;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		margin: 2.5rem 0;	
+	} 
 }
 
 .skills{
@@ -154,7 +206,7 @@ html, body {
 		border: 1px solid black
 	}
 	td {
-		padding: 15px;
+		padding: 0.9rem;
 		text-align: left;
 		border: 1px solid;
 	  }
@@ -165,11 +217,19 @@ html, body {
 th, td {
     padding: 15px;
 	text-align: left;
+	@media(max-width: @mobileBreakpoint) {		
+		padding: 0;
+		margin: 9.5rem 0;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		padding: 0;
+		margin: 9.5rem 0;
+	}
   }
 
   .work-history-table{
       width: 100%;
-      margin: 5px auto;
+	  margin: 5px auto;	    
   }
 
   table.work-history-table tr:nth-child(even) {
@@ -179,16 +239,16 @@ th, td {
     background-color: #fff;
   }
   table.work-history-table th {
-    color: white;
-    background-color: gray;
+    color: black;
+    background-color: white;
   }
   
 
   .footer {
       color: white;
-      margin: 20px auto;
+      margin: 1.25rem auto;
       text-align: center;
-      padding: 30px;
-      padding-bottom: 30px;
+      padding: 1.8rem;
+      padding-bottom: 1.8rem;
       background-color: gray;
   }

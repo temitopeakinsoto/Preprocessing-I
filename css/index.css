@@ -138,11 +138,6 @@ body {
 :root {
   font-size: 100%;
 }
-@media (max-width: 550px) {
-  :root {
-    font-size: 150%;
-  }
-}
 .container-all {
   width: 80%;
   font-size: 1.25rem;
@@ -152,6 +147,20 @@ body {
   flex-direction: column;
   padding: 1.25rem 7.5rem;
 }
+@media (max-width: 500px) {
+  .container-all {
+    font-size: 150%;
+    padding: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .container-all {
+    font-size: 150%;
+    padding: 0;
+    width: 100%;
+  }
+}
 .nav-bar {
   margin: 1.25rem 0;
   width: 96%;
@@ -159,6 +168,16 @@ body {
 .nav-items-container {
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  .nav-items-container {
+    justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .nav-items-container {
+    justify-content: center;
+  }
 }
 .nav-item {
   list-style: none;
@@ -181,13 +200,36 @@ body {
   font-weight: bold;
   background-color: gray;
   padding: 10px;
-  width: 15%;
+  width: 20%;
+  margin: 1rem auto;
   border-radius: 10%;
+}
+@media (max-width: 500px) {
+  .header-section button {
+    margin: 1rem auto;
+  }
+}
+@media (max-width: 800px) {
+  .header-section button {
+    margin: 1rem auto;
+  }
 }
 .header-image {
   width: 30%;
   margin-top: 40px;
   margin-left: 40px;
+}
+@media (max-width: 500px) {
+  .header-image {
+    width: 50%;
+    margin: 0.6rem auto;
+  }
+}
+@media (max-width: 800px) {
+  .header-image {
+    width: 50%;
+    margin: 0.6rem auto;
+  }
 }
 .header-writeup {
   padding: 30px;
@@ -196,8 +238,32 @@ body {
   display: flex;
   margin: 4% 0;
 }
+@media (max-width: 500px) {
+  .profession-section {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .profession-section {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+}
 .professional-summary {
   flex: 1;
+}
+@media (max-width: 500px) {
+  .professional-summary {
+    margin: 2.5rem 0;
+  }
+}
+@media (max-width: 800px) {
+  .professional-summary {
+    margin: 2.5rem 0;
+  }
 }
 .skills {
   flex: 1;
@@ -211,7 +277,7 @@ body {
   border: 1px solid black;
 }
 .skills td {
-  padding: 15px;
+  padding: 0.9rem;
   text-align: left;
   border: 1px solid;
 }
@@ -219,6 +285,20 @@ th,
 td {
   padding: 15px;
   text-align: left;
+}
+@media (max-width: 500px) {
+  th,
+  td {
+    padding: 0;
+    margin: 9.5rem 0;
+  }
+}
+@media (max-width: 800px) {
+  th,
+  td {
+    padding: 0;
+    margin: 9.5rem 0;
+  }
 }
 .work-history-table {
   width: 100%;
@@ -231,14 +311,14 @@ table.work-history-table tr:nth-child(odd) {
   background-color: #fff;
 }
 table.work-history-table th {
-  color: white;
-  background-color: gray;
+  color: black;
+  background-color: white;
 }
 .footer {
   color: white;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   text-align: center;
-  padding: 30px;
-  padding-bottom: 30px;
+  padding: 1.8rem;
+  padding-bottom: 1.8rem;
   background-color: gray;
 }
