@@ -2,7 +2,9 @@
 
 .container-all{
     width: 80%;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700px;
+    line-height: 1.6rem;
     border: 1px solid black;
     margin: 0 auto;
     display: flex;
@@ -36,12 +38,17 @@
     display: flex;
     flex-direction: column;
     background-color: lightgrey;
+    padding: 
 }
 
 .header-image{
     width: 30%;
     margin-top: 40px;
     margin-left: 40px;
+}
+
+.header-writeup{
+    padding: 30px;
 }
 
 .profession-section{
@@ -65,3 +72,33 @@
 .skills-row .skills-table tr{
     background-color: blue;
 }
+
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
+
+  .work-history-table{
+      width: 100%;
+      margin: 5px auto;
+  }
+
+  table.work-history-table tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  table#t01 th {
+    color: white;
+    background-color: black;
+  }
+  
+
+  .footer {
+      margin: 20px auto;
+      text-align: center;
+      padding: 30px;
+      padding-bottom: 30px;
+      background-color: gray;
+  }
