@@ -54,6 +54,208 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+/* Compile your LESS file! */
+
+@mobileBreakpoint: 500px;
+@tabletBreakpoint: 800px;
+
+// font sizes for root
+@desktopRootFontSize: 100%;
+@mobileRootFontSize: 150%;
+
+:root {
+	font-size: @desktopRootFontSize;
+  
+	// @media(max-width: @mobileBreakpoint) {
+	//   font-size: @mobileRootFontSize;
+	//   display: flex;
+	//   flex-direction: column;
+	// }
+  }
+
+.container-all{
+    width: 80%;
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+	padding: 1.25rem 7.5rem;
+	@media(max-width: @mobileBreakpoint) {
+		font-size: @mobileRootFontSize;
+		padding: 0;
+		width: 100%;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		font-size: @mobileRootFontSize;
+		padding: 0;
+		width: 100%;	
+	}
+}
+
+.nav-bar{
+	margin: 1.25rem 0;
+	width: 96%;
+}
+
+.nav-items-container{
+    display: flex;
+	justify-content: flex-end;
+	@media(max-width: @mobileBreakpoint) {		
+		justify-content: center;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		justify-content: center;
+	}
+    
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.main-section{
+    width: 90%;
+    /* background-color: blue; */
+    margin: 0 1% 0 4%;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+	background-color: lightgrey;
+	h1{
+		font-size: 3rem;
+		margin: 2rem 0;
+	}
+	p{
+		font-size: 1.5rem;
+	}
+	button{
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		background-color: gray;
+		padding: 10px;
+		width: 20%;
+		margin: 1rem auto;
+		border-radius: 10%;	
+		@media(max-width: @mobileBreakpoint) {		
+			margin: 1rem auto;
+		}
+		@media(max-width: @tabletBreakpoint) {	
+			margin: 1rem auto;
+		}
+			
+	}    
+}
+
+.header-image{
+    width: 30%;
+    margin-top: 40px;
+	margin-left: 40px;
+	@media(max-width: @mobileBreakpoint) {		
+		width: 50%;
+    	margin: 0.6rem auto;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		width: 50%;
+    	margin: 0.6rem auto;
+	}
+}
+
+.header-writeup{
+    padding: 30px;
+}
+
+.profession-section{
+	display: flex;
+	margin: 4% 0;
+	@media(max-width: @mobileBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		flex-direction: column;
+		padding: 0;
+		width: 100%;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		flex-direction: column;
+		padding: 0;
+		width: 100%;	
+	}
+}
+
+.professional-summary{
+	flex: 1;   
+	@media(max-width: @mobileBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		margin: 2.5rem 0;	
+	}
+	@media(max-width: @tabletBreakpoint) {
+		// font-size: @mobileRootFontSize;
+		margin: 2.5rem 0;	
+	} 
+}
+
+.skills{
+	flex: 1;
+	h1{
+		margin-left: 20px;
+	}
+	.skills-table{
+		width: 95%;
+		margin: 0 4%;
+		border: 1px solid black
+	}
+	td {
+		padding: 0.9rem;
+		text-align: left;
+		border: 1px solid;
+	  }
+
+
+}
+
+th, td {
+    padding: 15px;
+	text-align: left;
+	@media(max-width: @mobileBreakpoint) {		
+		padding: 0 0.3rem;
+		margin: 9.5rem 0;
+	}
+	@media(max-width: @tabletBreakpoint) {	
+		padding: 0 0.3rem;
+		margin: 9.5rem 0;
+	}
+  }
+
+  .work-history-table{
+      width: 100%;
+	  margin: 5px auto;	    
+  }
+
+  table.work-history-table tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table.work-history-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  table.work-history-table th {
+    color: black;
+    background-color: white;
+  }
+  
+
+  .footer {
+      color: white;
+      margin: 1.25rem auto;
+      text-align: center;
+      padding: 1.8rem;
+      padding-bottom: 1.8rem;
+      background-color: gray;
+  }
